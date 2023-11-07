@@ -44,7 +44,7 @@
     //console.log(response.length);
     //console.log(pictures.length);
     for (let i = 0; i < response.length; i++) {
-      let imagePath = response[i].medium;
+      let imagePath = JSON.parse(response[i]);
       let image = document.createElement("img");
       image.src = imagePath;
       id("pictures").appendChild(image);
