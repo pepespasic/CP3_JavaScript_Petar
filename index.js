@@ -22,27 +22,35 @@
    */
    function init() {
      // THIS IS THE CODE THAT WILL BE EXECUTED ONCE THE WEBPAGE LOADS
+     let gender = qsa("input");
+     gender[0].addEventListener("change", makeRequest);
+     gender[1].addEventListener("change", makeRequest);
    }
 
-   /**
-   * Make sure to always add a descriptive comment above
-   * every function detailing what it's purpose is
-   * Use JSDoc format with @param and @return.
-   */
-   function exampleFunction1() {
-     /* SOME CODE */
-   }
+   function makeRequest() {
+    // TODO
+    let gender = this.value;
+    let url = "https://randomuser.me/api/?gender=" + gender;
+    fetch(url)
+    .then(statusCheck)
+    .then(resp => resp.JSON())
+    .then(processData)
+    .catch(console.error);
+  }
 
-   /**
-   * Make sure to always add a descriptive comment above
-   * every function detailing what it's purpose is
-   * @param {variabletype} someVariable This is a description of someVariable, including, perhaps, preconditions.
-   * @returns {returntype} A description of what this function is actually returning
-   */
-   function exampleFunction2(someVariable) {
-     /* SOME CODE */
-     return something;
-   }
+  function processData(response) {
+    // TODO
+    id("pictures").innerHTML = "";
+    let pictures = response.split('\n');
+    //console.log(response.length);
+    //console.log(pictures.length);
+    for (let i = 0; i < pictures.length; i++) {
+      let imagePath = pictures[i];
+      let image = document.createElement("img");
+      image.src = imagePath;
+      id("pictures").appendChild(image);
+    }
+  }
 
    /** ------------------------------ Helper Functions  ------------------------------ */
    /**
