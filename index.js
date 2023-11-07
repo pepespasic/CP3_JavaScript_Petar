@@ -33,7 +33,7 @@
     let url = "https://randomuser.me/api/?gender=" + gender;
     fetch(url)
     .then(statusCheck)
-    .then(resp => resp.JSON())
+    .then(resp => resp.json())
     .then(processData)
     .catch(console.error);
   }
