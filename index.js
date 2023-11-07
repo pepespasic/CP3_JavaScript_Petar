@@ -44,11 +44,25 @@
     //console.log(response.length);
     //console.log(pictures.length);
     for (let i = 0; i < response.length; i++) {
-      let imagePath = JSON.parse(response[i]);
+      let imagePath = response.results[0].picture.medium;
       let image = document.createElement("img");
       image.src = imagePath;
       id("pictures").appendChild(image);
     }
+  }
+
+   /**
+   * Helper function to return the response's result text if successful, otherwise
+   * returns the rejected Promise result with an error status and corresponding text
+   * @param {object} res - response to check for success/error
+   * @return {object} - valid response if response was successful, otherwise rejected
+   *                    Promise result
+   */
+   async function statusCheck(res) {
+    if (!res.ok) {
+      throw new Error(await res.text());
+    }
+    return res;
   }
 
    /** ------------------------------ Helper Functions  ------------------------------ */
