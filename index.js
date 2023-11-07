@@ -41,11 +41,10 @@
   function processData(response) {
     // TODO
     id("pictures").innerHTML = "";
-    let pictures = response.split('\n');
     //console.log(response.length);
     //console.log(pictures.length);
-    for (let i = 0; i < pictures.length; i++) {
-      let imagePath = pictures[i].medium;
+    for (let i = 0; i < response.length; i++) {
+      let imagePath = $URLMapContent.jsonField.JSON[i].medium;
       let image = document.createElement("img");
       image.src = imagePath;
       id("pictures").appendChild(image);
