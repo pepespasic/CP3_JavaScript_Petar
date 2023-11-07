@@ -23,7 +23,7 @@ An important skill to have is knowing how to read and understand the provided do
 * Some of these APIs may require API keys - an API key is helpful to ensure the service isn't overloaded with requests from clients, and most public APIs you work with as a web developer will require some sort of key or authentication. Each API has sufficient documentation to get access to your key once you register for a developer account (required for a key). That said, feel free to visit OH if you have any questions about getting/using API keys! Remember that you should **not** be opting in to any paid subscription plan.
 
 ## Ideas for CP3
-As a Creative Project, we encourage you to explore the new material covered in class, as well as related (but optional) content we may link to along the way, as long as you adhere to Academic Integrity policies. In past quarters, some students have built upon their Creative Project each week. You may choose to do a new website for each CP, or build on the existing project from previous CP's.
+As a Creative Project, we encourage you to explore the new material covered in class, as well as related (but optional) content we may link to along the way, as long asa you adhere to Academic Integrity policies. In past quarters, some students have built upon their Creative Project each week. You may choose to do a new website for each CP, or build on the existing project from previous CP's.
 
 As long as you meet the requirements outlined below, you have freedom in what kind of website you create.
 
