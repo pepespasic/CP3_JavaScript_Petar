@@ -1,6 +1,6 @@
 /**
  * Name: Petar Spasic
- * Date: 10/07/2023
+ * Date: 11/07/2023
  *
  * Here my JavaScript file that takes user input and display after user has clicked the button.
  * It handles error if images can't be displayed.
