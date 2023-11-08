@@ -44,7 +44,7 @@
     //console.log(response.length);
     //console.log(pictures.length);
     for (let i = 0; i < response.length; i++) {
-      let imagePath = response.results[0].picture.medium;
+      let imagePath = response[i].results[0].picture.medium;
       console.log(imagePath);
       let image = document.createElement("img");
       image.src = imagePath;
