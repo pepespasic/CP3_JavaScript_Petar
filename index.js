@@ -30,7 +30,6 @@
     // TODO
     let gender = this.value;
     let url = "https://randomuser.me/api/?gender=" + gender;
-    console.log(url);
     id("pictures").innerHTML = "";
     for (let i = 0; i < 30; i++) {
       fetch(url)
