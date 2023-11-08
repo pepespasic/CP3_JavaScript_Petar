@@ -22,7 +22,7 @@
    */
    function init() {
      // THIS IS THE CODE THAT WILL BE EXECUTED ONCE THE WEBPAGE LOADS
-     let gender = qsa("input");
+     let gender = qsa("label input");
      gender[0].addEventListener("change", makeRequest);
      gender[1].addEventListener("change", makeRequest);
    }
@@ -31,25 +31,22 @@
     // TODO
     let gender = this.value;
     let url = "https://randomuser.me/api/?gender=" + gender;
-    fetch(url)
-    .then(statusCheck)
-    .then(resp => resp.json())
-    .then(processData)
-    .catch(console.error);
+    console.log(url);
+    id("pictures").innerHTML = "";
+    for (let i = 0; i < 30; i++) {
+      fetch(url)
+      .then(statusCheck)
+      .then(resp => resp.json())
+      .then(processData)
+      .catch(console.error);
+    }
   }
 
   function processData(response) {
-    // TODO
-    id("pictures").innerHTML = "";
-    //console.log(response.length);
-    //console.log(pictures.length);
-    for (let i = 0; i < response.length; i++) {
-      let imagePath = response[i].results[0].picture.medium;
-      console.log(imagePath);
-      let image = document.createElement("img");
-      image.src = imagePath;
-      id("pictures").appendChild(image);
-    }
+    let imagePath = response.results[0].picture.medium;
+    let image = document.createElement("img");
+    image.src = imagePath;
+    id("pictures").appendChild(image);
   }
 
    /**
