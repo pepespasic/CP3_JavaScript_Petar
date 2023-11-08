@@ -40,15 +40,6 @@
     }
   }
   /**
-   * Displays error message on page.
-   * @param {*} response error message
-   */
-  function handleError(response) {
-    let paragraph = document.createElement("p");
-    paragraph.textContent = response;
-    id("pictures").appendChild(paragraph);
-  }
-  /**
    * Retrieves image url from response and 
    * displays it on page.
    * @param {*} response web page with JSON data
@@ -59,7 +50,15 @@
     image.src = imagePath;
     id("pictures").appendChild(image);
   }
-
+  /**
+   * Displays error message on page.
+   * @param {*} response error message
+   */
+  function handleError(response) {
+    let paragraph = document.createElement("p");
+    paragraph.textContent = response;
+    id("pictures").appendChild(paragraph);
+  }
    /**
    * Helper function to return the response's result text if successful, otherwise
    * returns the rejected Promise result with an error status and corresponding text
