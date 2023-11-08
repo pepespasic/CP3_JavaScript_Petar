@@ -1,16 +1,13 @@
 /**
- * Name: _your name here_
- * Date: _add date here_
+ * Name: Petar Spasic
+ * Date: 10/07/2023
  *
- * -- your description of what this file does here --
- * Do not keep comments from this template in any work you submit (functions included under "Helper
- * functions" are an exception, you may keep the function names/comments of id/qs/qsa/gen)
+ * Here my JavaScript file that takes user input and display after user has clicked the button.
+ * It handles error if images can't be displayed.
  */
 "use strict";
 
 (function() {
-
-   // MODULE GLOBAL VARIABLES, CONSTANTS, AND HELPER FUNCTIONS CAN BE PLACED HERE
 
    /**
    * Add a function that will be called when the window is loaded.
