@@ -26,7 +26,9 @@
      gender[0].addEventListener("change", makeRequest);
      gender[1].addEventListener("change", makeRequest);
    }
-
+   /**
+    * Fetches data from random user api.
+    */
    function makeRequest() {
     // TODO
     let gender = this.value;
@@ -38,10 +40,23 @@
       .then(statusCheck)
       .then(resp => resp.json())
       .then(processData)
-      .catch(console.error);
+      .catch(handleError);
     }
   }
-
+  /**
+   * Displays error message on page.
+   * @param {*} response error message
+   */
+  function handleError(response) {
+    let paragraph = document.createElement("p");
+    paragraph.textContent = response;
+    id("pictures").appendChild(paragraph);
+  }
+  /**
+   * Retrieves image url from response and 
+   * displays it on page.
+   * @param {*} response web page with JSON data
+   */
   function processData(response) {
     let imagePath = response.results[0].picture.medium;
     let image = document.createElement("img");
